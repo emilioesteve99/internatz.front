@@ -1,16 +1,16 @@
 import React from "react";
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
-import "primeicons/primeicons.css";                                //icons
-import Menu from './components/Menu';
-import TranslationsTable from "./components/TranslationsTable";
-import { projects } from "./fakeData/Projects";
-import Home from "./pages/Home";
+import "primereact/resources/themes/lara-light-indigo/theme.css"; //theme
+import "primereact/resources/primereact.min.css"; //core css
+import "primeicons/primeicons.css";
+import LoginPage from "./pages/login/login.page";
+import TranslationsPage from "./pages/translations/translations.page";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
-export default function App () {
-
-    return (
-      <Home/>
-    );
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/translations" element={<TranslationsPage />} />
+    </Routes>
+  );
 }
-                 
